@@ -1,7 +1,8 @@
- body {
+ body { 
+    background-color: black;
+  color: yellow;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+ 
   padding: 20px;
 }
 
@@ -9,8 +10,8 @@ h2 {
   text-align: center;
 }
 
-form {
-  background-color: #fff;
+form { border: 2px solid #FFD700;
+  background-color: #111;
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
@@ -18,12 +19,17 @@ form {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-label {
+label {  
+  color: rgb(180, 186, 22);
   display: block;
   margin-top: 10px;
+
 }
 
-input, select {
+input, select {  
+  background-color: #000; 
+  border: 1px solid yellow;
+  color: white;
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -37,12 +43,14 @@ button {
   padding: 10px;
   margin-top: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px; 
   background-color: #4CAF50;
+   color: #000;
   color: white;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+button:hover { 
+    background-color: yellowgreen;
+  
 }
