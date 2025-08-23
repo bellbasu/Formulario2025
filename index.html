@@ -84,12 +84,12 @@
     <input type="date" id="fecha">
 
     <label for="pais">País de residencia:</label>
-    <select id="pais">
-      <option value="">Seleccionar</option>
-      <option value="Argentina">Argentina</option>
-      <option value="Chile">Chile</option>
-    </select>
-
+   <select id="pais" name="pais" required>
+  <option value="">Seleccionar país...</option>
+  <option value="Argentina">Argentina</option>
+  <option value="Chile">Chile</option>
+</select> 
+   
     <button type="submit">Enviar</button> 
     <button id="toggleContraste">Modo Alto Contraste</button>
   </form>
@@ -123,3 +123,4 @@ campos.forEach((campo) => {
 
 </body>
 </html>
+
