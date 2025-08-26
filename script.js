@@ -7,10 +7,11 @@
   const emailValido = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
   if (!emailValido.test(email)) {
-    mensaje.textContent = "⚠️ El email no tiene un formato válido.";
+    mensaje.textContent = " El email no tiene un formato válido.";
     mensaje.style.color = "red";
   } else {
     mensaje.textContent = "✅ Formulario enviado correctamente.";
     mensaje.style.color = "green";
   }
 });
+
