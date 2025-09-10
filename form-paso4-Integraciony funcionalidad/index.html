@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con Validación</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #miFormulario {
+    border: 2px solid #4CAF50; /* Borde verde */
+    padding: 20px;
+    border-radius: 10px;       /* Bordes redondeados */
+    max-width: 400px;
+    margin: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+  } 
+  /* Estilo base del formulario */
+  #miFormulario {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Cambia el color del borde al pasar el mouse */
+  #miFormulario:hover {
+    border-color: #2196F3; /* Azul */
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.3);
+  }
+
+  /* Estilo de los campos */
+  #miFormulario input,
+  #miFormulario select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Botón de envío */
+  #miFormulario button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #miFormulario button:hover {
+    background-color: #45a049;
+  }
+
+  /* Diseño responsive */
+  @media (max-width: 600px) {
+    #miFormulario {
+      padding: 15px;
+      max-width: 90%;
+    }
+  }
+
+</style>
+
+</head>
+<body class="alto-contraste"  > 
+  <h2>Formulario de Datos Personales</h2>
+  <form id="miFormulario"> 
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha">
+
+    <label for="pais">País de residencia:</label>
+    <select id="pais">
+      <option value="">Seleccionar</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Chile">Chile</option>
+    </select>
+
+    <button type="submit">Enviar</button> 
+    <button id="toggleContraste">Modo Alto Contraste</button>
+  </form>
+  <p id="mensaje"></p>
+
+  <script src="script.js"></script> 
+
+  <script>
+  const btnContraste = document.getElementById("toggleContraste");
+  btnContraste.addEventListener("click", () => {
+    document.body.classList.toggle("alto-contraste");
+    btnContraste.textContent = 
+      document.body.classList.contains("alto-contraste") 
+        ? "Desactivar Alto Contraste" 
+        : "Modo Alto Contraste";
+  }); 
+  const campos = document.querySelectorAll("input, select");
+
+campos.forEach((campo) => {
+  campo.addEventListener("input", () => {
+    campo.style.backgroundColor = "white";
+    campo.style.color = "black";
+  }); 
+   campo.addEventListener("blur", () => {
+    campo.style.backgroundColor = "#222"; // fondo oscuro
+    campo.style.color = "white"; // texto claro
+  });
+});
+
+</script>
+
+</body>
+</html>

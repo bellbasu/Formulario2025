@@ -1,0 +1,42 @@
+ body {
+  font-family: Arial;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+input, select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+/* Estilo alto contraste */
+.alto-contraste {
+  background-color: rgb(39, 38, 38);
+  color: rgb(255, 157, 0);
+}
+
+.alto-contraste input,
+.alto-contraste select,
+.alto-contraste button {
+  background-color: rgb(79, 75, 75);
+  color: rgb(255, 149, 0);
+  border: 2px solid rgb(255, 213, 0);
+}
+#miFormulario button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
